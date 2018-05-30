@@ -3,9 +3,7 @@ var loggedIn = false;
 
 export function initializeStorage() {
     if (localStorage.getItem("LOGGED_IN")) {
-        loggedIn = localStorage.getItem("LOGGED_IN");
-    } else {
-        loggedIn = false;
+        loggedIn = JSON.parse(localStorage.getItem("LOGGED_IN"));
     }
 }
 

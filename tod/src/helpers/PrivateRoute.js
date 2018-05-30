@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { initializeStorage, isLoggedIn } from '../utils/AuthService';
+import { isLoggedIn } from '../utils/AuthService';
 
 function PrivateRoute ({component: Component, ...rest}) {
   return (

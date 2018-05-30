@@ -4,7 +4,6 @@ import { withStyles } from 'material-ui/styles';
 import List, {
   ListItem,
   ListItemAvatar,
-  ListItemIcon,
   ListItemSecondaryAction,
   ListItemText,
 } from 'material-ui/List';
@@ -31,13 +30,12 @@ const styles = theme => ({
 
 class UpcomingList extends React.Component {
   state = {
-    dense: false,
     secondary: false,
   };
 
   render() {
     const { classes } = this.props;
-    const { dense, secondary } = this.state;
+    const { secondary } = this.state;
 
     return (
       <div>

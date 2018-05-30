@@ -6,8 +6,8 @@ import Grid from 'material-ui/Grid';
 import { Paper } from 'material-ui';
 import Typography from 'material-ui/Typography';
 import LinkButton from './LinkButton';
-import { Link, Redirect } from 'react-router-dom';
-import { isLoggedIn, login } from '../utils/AuthService';
+import { Redirect } from 'react-router-dom';
+import { isLoggedIn } from '../utils/AuthService';
 
 const styles = theme => ({
   container: {
@@ -27,11 +27,11 @@ const styles = theme => ({
   },
 });
 
-function handleLogin() {
-  login();
+function handleRecover() {
+  //
 }
 
-class Login extends React.Component {
+class Recover extends React.Component {
     state = {
         name: ''
       };
@@ -53,7 +53,7 @@ class Login extends React.Component {
                 <Grid item xs="3">
                   <Paper className={classes.container} >
                     <Typography variant="headline" component="h3">
-                      Login
+                      Forgot Password
                     </Typography>
                     <form noValidate autoComplete="off">
                       <TextField
@@ -64,22 +64,11 @@ class Login extends React.Component {
                           onChange={this.handleChange('name')}
                           margin="normal"
                       />
-                      <TextField
-                          id="password-input"
-                          label="Password"
-                          className={classes.textField}
-                          type="password"
-                          autoComplete="current-password"
-                          margin="normal"
-                      />
-                      <Link to="/recover">Forgot your password?</Link>
                       <Grid container spacing="12">
-                        <Grid item xs="4">
-                          <Link to="/register">Register</Link>
-                        </Grid>
+                        <Grid item xs="4"></Grid>
                         <Grid item xs="4"></Grid>
                         <Grid item xs="4">
-                          <LinkButton to="/home" onClick={handleLogin}>Next</LinkButton>
+                          <LinkButton to="/" onClick={handleRecover}>Next</LinkButton>
                         </Grid>
                       </Grid>
                     </form>
@@ -92,8 +81,8 @@ class Login extends React.Component {
     }
 }
 
-Login.propTypes = {
+Recover.propTypes = {
     classes: PropTypes.object.isRequired,
   };
   
-  export default withStyles(styles)(Login);
+  export default withStyles(styles)(Recover);

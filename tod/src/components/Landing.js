@@ -16,7 +16,7 @@ const styles = theme => ({
   },
 });
 
-class Home extends React.Component {
+class Landing extends React.Component {
     
     render() {
         const { classes } = this.props;
@@ -38,8 +38,8 @@ class Home extends React.Component {
     }
 }
 
-Home.propTypes = {
+Landing.propTypes = {
     classes: PropTypes.object.isRequired,
   };
   
-  export default withStyles(styles)(Home);
+  export default withStyles(styles)(Landing);
