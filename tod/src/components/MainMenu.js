@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
@@ -18,7 +18,7 @@ import Paper from '@material-ui/core/Paper';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-const styles = theme => ({
+const styles = {
     root: {
       flexGrow: 1,
       display: "flex",
@@ -36,7 +36,7 @@ const styles = theme => ({
     menuItem: {
       textDecoration: 'none',
     },
-  });
+  };
 
 
 class MainMenu extends React.Component {
@@ -91,7 +91,7 @@ class MainMenu extends React.Component {
                           <Paper style={{ margin:3 }}>
                             <MenuList role="menu">
                               <MenuItem onClick={this.handleClose}><Link to="/home" className={classes.menuItem}>Upcoming Training</Link></MenuItem>
-                              <MenuItem onClick={this.handleClose}>Training Topics</MenuItem>
+                              <MenuItem onClick={this.handleClose}><Link to="/topic" className={classes.menuItem}>Training Topics</Link></MenuItem>
                               <MenuItem onClick={this.handleClose}>My Trainings</MenuItem>
                             </MenuList>
                           </Paper>

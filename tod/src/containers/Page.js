@@ -9,6 +9,7 @@ import Register from '../components/Register'
 import { Switch, Route } from 'react-router-dom';
 import { initializeStorage } from '../utils/AuthService';
 import PrivateRoute from '../helpers/PrivateRoute';
+import TopicList from '../components/TopicList';
 
 class Page extends React.Component {
 
@@ -27,6 +28,7 @@ class Page extends React.Component {
                     <Route path="/recover" component={Recover}/>
                     <Route path="/register" component={Register}/>
                     <PrivateRoute path="/home" component={UpcomingList}/>
+                    <PrivateRoute path="/topic" component={TopicList}/>
                     <Route component={NotFound}/>
                 </Switch>
             </div>

@@ -8,12 +8,11 @@ import List, {
   ListItemText,
 } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
-import IconButton from 'material-ui/IconButton';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import Info from '@material-ui/icons/Info';
 import Schedule from '@material-ui/icons/Schedule';
 import Divider from 'material-ui/Divider';
+import TrainingListItem from './TrainingListItem';
 
 const styles = theme => ({
   root: {
@@ -45,11 +44,11 @@ class UpcomingList extends React.Component {
               Upcoming Training Sessions
             </Typography>
             <div className={classes.demo}>
-              <List dense="false">
+              <List dense={false}>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar>
-                        <Schedule />
+                        <Schedule/>
                       </Avatar>
                     </ListItemAvatar>
                     <ListItemText
@@ -57,9 +56,12 @@ class UpcomingList extends React.Component {
                       secondary={secondary ? 'Secondary text' : null}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton aria-label="Join">
-                        <Info />
-                      </IconButton>
+                      <TrainingListItem
+                        trainer="Luiz Gonzaga"
+                        date="10/01/2010"
+                        time="11h"
+                        location="Sala Itupeva"
+                        registered={false}/>
                     </ListItemSecondaryAction>
                   </ListItem>
                   <li>
@@ -76,9 +78,12 @@ class UpcomingList extends React.Component {
                       secondary={secondary ? 'Secondary text' : null}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton aria-label="Join">
-                        <Info />
-                      </IconButton>
+                      <TrainingListItem
+                        trainer="Luiz Gonzaga"
+                        date="10/01/2010"
+                        time="11h"
+                        location="Sala Itupeva"
+                        registered={false}/>
                     </ListItemSecondaryAction>
                   </ListItem>
                   <li>
@@ -95,9 +100,12 @@ class UpcomingList extends React.Component {
                       secondary={secondary ? 'Secondary text' : null}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton aria-label="Join">
-                        <Info />
-                      </IconButton>
+                      <TrainingListItem
+                        trainer="Jonas Romão"
+                        date="10/01/2016"
+                        time="13h"
+                        location="Sala Azca"
+                        registered={false}/>
                     </ListItemSecondaryAction>
                   </ListItem>
                   <li>
@@ -111,7 +119,7 @@ class UpcomingList extends React.Component {
               Your Training Sessions
             </Typography>
             <div className={classes.demo}>
-              <List dense="false">
+              <List dense={false}>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar>
@@ -123,9 +131,12 @@ class UpcomingList extends React.Component {
                       secondary={secondary ? 'Secondary text' : null}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton aria-label="Join">
-                        <Info />
-                      </IconButton>
+                      <TrainingListItem
+                        trainer="Guilherme Oliveira"
+                        date="10/02/2019"
+                        time="8h"
+                        location="Sala Guajuvira"
+                        registered={true}/>
                     </ListItemSecondaryAction>
                   </ListItem>
                   <li>
@@ -142,9 +153,12 @@ class UpcomingList extends React.Component {
                       secondary={secondary ? 'Secondary text' : null}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton aria-label="Join">
-                        <Info />
-                      </IconButton>
+                      <TrainingListItem
+                        trainer="Luiz Gonzaga"
+                        date="10/01/2010"
+                        time="11h"
+                        location="Sala Itupeva"
+                        registered={true}/>
                     </ListItemSecondaryAction>
                   </ListItem>
                   <li>
@@ -161,9 +175,12 @@ class UpcomingList extends React.Component {
                       secondary={secondary ? 'Secondary text' : null}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton aria-label="Join">
-                        <Info />
-                      </IconButton>
+                      <TrainingListItem
+                        trainer="Luiz Gonzaga"
+                        date="10/01/2010"
+                        time="11h"
+                        location="Sala Itupeva"
+                        registered={true}/>
                     </ListItemSecondaryAction>
                   </ListItem>
                   <li>

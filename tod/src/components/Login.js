@@ -41,6 +41,13 @@ class Login extends React.Component {
           [name]: event.target.value,
         });
       };
+
+    handleEnter = event => {
+      if(event.key === 'Enter') {
+        handleLogin();
+        this.props.history.push('/home');
+      }
+    };
     
     render() {
         const { classes } = this.props;
@@ -49,8 +56,8 @@ class Login extends React.Component {
           <div>
             {(isLoggedIn()) ?
               (<Redirect to="/home"/>):
-              (<Grid container spacing="12" justify="center" className={classes.home}>
-                <Grid item xs="3">
+              (<Grid container spacing={16} justify="center" className={classes.home}>
+                <Grid item xs={3}>
                   <Paper className={classes.container} >
                     <Typography variant="headline" component="h3">
                       Login
@@ -71,14 +78,15 @@ class Login extends React.Component {
                           type="password"
                           autoComplete="current-password"
                           margin="normal"
+                          onKeyPress={this.handleEnter}
                       />
                       <Link to="/recover">Forgot your password?</Link>
-                      <Grid container spacing="12">
-                        <Grid item xs="4">
+                      <Grid container spacing={16}>
+                        <Grid item xs={4}>
                           <Link to="/register">Register</Link>
                         </Grid>
-                        <Grid item xs="4"></Grid>
-                        <Grid item xs="4">
+                        <Grid item xs={4}></Grid>
+                        <Grid item xs={4}>
                           <LinkButton to="/home" onClick={handleLogin}>Next</LinkButton>
                         </Grid>
                       </Grid>

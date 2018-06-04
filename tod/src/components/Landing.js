@@ -22,8 +22,8 @@ class Landing extends React.Component {
         const { classes } = this.props;
 
         return (
-          <Grid container spacing="12" justify="center" className={classes.home}> 
-            <Grid item xs="6">
+          <Grid container spacing={16} justify="center" className={classes.home}> 
+            <Grid item xs={6}>
               <Paper className={classes.root} elevation={4}>
                 <Typography variant="headline" component="h3">
                   Welcome to Training On-Demand.
