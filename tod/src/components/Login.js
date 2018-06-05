@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import TextField from 'material-ui/TextField';
-import Grid from 'material-ui/Grid';
-import { Paper } from 'material-ui';
-import Typography from 'material-ui/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import { Paper } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import LinkButton from './LinkButton';
 import { Link, Redirect } from 'react-router-dom';
 import { isLoggedIn, login } from '../utils/AuthService';

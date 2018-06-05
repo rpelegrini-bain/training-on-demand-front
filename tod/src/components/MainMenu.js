@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import LinkButton from '../components/LinkButton'
-import IconButton from 'material-ui/IconButton';
+import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { isLoggedIn, logout } from '../utils/AuthService';
 import { Manager, Target, Popper } from 'react-popper';
@@ -18,10 +18,9 @@ import Paper from '@material-ui/core/Paper';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-const styles = {
+const styles = theme => ({
     root: {
       flexGrow: 1,
-      display: "flex",
     },
     flex: {
       flex: 1,
@@ -36,7 +35,7 @@ const styles = {
     menuItem: {
       textDecoration: 'none',
     },
-  };
+  });
 
 
 class MainMenu extends React.Component {
@@ -103,7 +102,7 @@ class MainMenu extends React.Component {
               (null)
             }
             <LinkButton color="inherit" to="/" className={classes.flex}>
-              <Typography variant="title" color="inherit" >
+              <Typography variant="title" color="inherit" className={classes.flex}>
                 Training On-Demand
               </Typography>
             </LinkButton>

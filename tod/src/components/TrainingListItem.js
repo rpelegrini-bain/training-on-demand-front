@@ -7,8 +7,17 @@ import PersonIcon from '@material-ui/icons/Person';
 import DateRange from '@material-ui/icons/DateRange';
 import Schedule from '@material-ui/icons/Schedule';
 import LocationOn from '@material-ui/icons/LocationOn';
-import { Dialog, DialogTitle, DialogContent, Button, List } from '@material-ui/core';
-import { DialogContentText, DialogActions, IconButton, ListItem, ListItemAvatar, ListItemText } from 'material-ui';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemText from '@material-ui/core/ListItemText';
+import IconButton from '@material-ui/core/IconButton';
 import LinkButton from './LinkButton';
 
 const styles = theme => ({
